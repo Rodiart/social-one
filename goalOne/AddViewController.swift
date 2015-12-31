@@ -76,7 +76,7 @@ class AddViewController: UIViewController, UIPickerViewDataSource, UIPickerViewD
     
     //cancel btn
     
-    @IBAction func cancelButton(sender: AnyObject) {
+    @IBAction func cancelButton(sender: AnyObject) { 
         self.dismissViewControllerAnimated(true, completion: nil)
         
     }
