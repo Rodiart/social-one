@@ -89,13 +89,21 @@ class AddViewController: UIViewController, UIPickerViewDataSource, UIPickerViewD
         if charCount > 3 && charCount < 30 {
             mainArray.append(field.text!)
             self.dismissViewControllerAnimated(true, completion: nil)
-        } else {
-            let alert = UIAlertController(title: "Error", message: "Make sure you enter a reminder!", preferredStyle: UIAlertControllerStyle.Alert)
+        } else if charCount < 3 {
+            let alert = UIAlertController(title: "Error", message: "Make sure you enter a longer reminder!", preferredStyle: UIAlertControllerStyle.Alert)
             let alertAction = UIAlertAction(title: "Ok", style: UIAlertActionStyle.Default, handler: nil)
             alert.addAction(alertAction)
             self.presentViewController(alert, animated: true, completion: nil)
+            
+        } else if charCount > 30 {
+            let alert = UIAlertController(title: "Error", message: "Try entering a shorter reminder!", preferredStyle: UIAlertControllerStyle.Alert)
+            let alertAction = UIAlertAction(title: "Ok", style: UIAlertActionStyle.Default, handler: nil)
+            alert.addAction(alertAction)
+            self.presentViewController(alert, animated: true, completion: nil)
+        
+        }
         }
         
     }
 
-}
+
