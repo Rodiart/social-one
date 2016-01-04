@@ -102,8 +102,8 @@ class AddViewController: UIViewController, UIPickerViewDataSource, UIPickerViewD
             self.presentViewController(alert, animated: true, completion: nil)
         
         }
-        }
-        
     }
+        
+}
 
 
